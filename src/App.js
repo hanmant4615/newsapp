@@ -1,11 +1,19 @@
 
 import './App.css';
-import Navbar from './components/Navbar';
+import  Navbar from './components/Navbar'
 
-function App() {
-  return (
-    <Navbar/>
-  );
+import React, { Component } from 'react'
+
+export default class App extends Component {
+  render() {
+    return (
+      <>
+      <Navbar/>
+      </>
+
+    )
+  
+}
 }
 
-export default App;
+
