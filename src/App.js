@@ -10,20 +10,7 @@ export default class App extends Component {
     return (
       <>
       <Navbar/>
-      <div className='container'>
-        <div className="row">
-        <div className='col-md-4'>
-        <News />
-        </div>
-        <div className='col-md-4'>
-        <News />
-        </div>
-        <div className='col-md-4'>
-        <News />
-        </div>
-        </div>
-       
-      </div>
+      <News/>
       </>
 
     )
