@@ -5,8 +5,8 @@ export class Newcontent extends Component {
   render() {
     let {title , description, url ,Imageurl} = this.props;
     return (
-    <div className="card" style={{width: "18rem"}}>
-    <img className="card-img-top" src={Imageurl} alt="...."/>
+    <div className="card" >
+    <img className="card-img-top" src={!Imageurl || Imageurl === 'null'?"https://ak.picdn.net/shutterstock/videos/2500214/thumb/1.jpg":Imageurl} alt="...."/>
     <div className="card-body">
       <h5 className="card-title">{title }</h5>
       <p className="card-text">{description}</p>
