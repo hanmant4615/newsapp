@@ -4,11 +4,12 @@ import React, { Component } from 'react'
 import News from './components/News';
 
 export default class App extends Component {
+  apikey = process.env.REACT_APP_NEWS_API
   render() {
     return (
       <>
       <Navbar mode='dark'/>
-      <News />
+      <News apikey={this.apikey}/>
    
       </>
 

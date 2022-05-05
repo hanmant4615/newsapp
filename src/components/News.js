@@ -21,7 +21,7 @@ export class News extends Component {
     };
   }
   async componentDidMount() {
-    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=3f183b394155471187be7096299beff8&pageSize=20`;
+    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apikey}&pageSize=20`;
     let data = await fetch(url);
     let parsedata = await data.json();
 
@@ -32,7 +32,7 @@ export class News extends Component {
   }
    handleprevious= async()=>{
      console.log("pervious");
-     let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=3f183b394155471187be7096299beff8&page=${this.state.page-1}&pageSize=20`;
+     let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apikey}&page=${this.state.page-1}&pageSize=20`;
      let data = await fetch(url);
      let parsedata = await data.json();
  
@@ -51,7 +51,7 @@ export class News extends Component {
     }
     else
     {
-    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=3f183b394155471187be7096299beff8&page=${this.state.page +1}&pageSize=20`;
+    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apikey}&page=${this.state.page +1}&pageSize=20`;
     let data = await fetch(url);
     let parsedata = await data.json();
 
