@@ -9,7 +9,6 @@ export default class App extends Component {
       <>
       <Navbar mode='dark'/>
       <News />
-   
       </>
 
     )
