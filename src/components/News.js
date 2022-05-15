@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Newcontent from "./Newcontent";
-
 export class News extends Component {
   static defaultProps = {
     country: "in",
@@ -21,7 +20,7 @@ export class News extends Component {
     };
   }
   async componentDidMount() {
-    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apikey}&pageSize=20`;
+    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apikey}&pageSize=21`;
     let data = await fetch(url);
     let parsedata = await data.json();
 
@@ -32,7 +31,7 @@ export class News extends Component {
   }
    handleprevious= async()=>{
      console.log("pervious");
-     let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apikey}&page=${this.state.page-1}&pageSize=20`;
+     let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apikey}&page=${this.state.page-1}&pageSize=21`;
      let data = await fetch(url);
      let parsedata = await data.json();
  
@@ -51,7 +50,7 @@ export class News extends Component {
     }
     else
     {
-    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apikey}&page=${this.state.page +1}&pageSize=20`;
+    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apikey}&page=${this.state.page +1}&pageSize=21`;
     let data = await fetch(url);
     let parsedata = await data.json();
 
